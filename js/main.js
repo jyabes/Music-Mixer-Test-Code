@@ -1,28 +1,81 @@
 console.log("JS file connected")
+const dropBox = document.querySelector(".drop-box"),
+iconAnimals = document.querySelectorAll(".icon-container img"),
+dropZones = document.querySelectorAll(".drop-zone"),
+dragZones = document.querySelector(".icon-container"),
+iconsCute = document.querySelectorAll(".icon-container img"),
+theAudioEl = document.querySelector('audio'),
+playButton = document.querySelector('#Play_button'),
+pauseButton = document.querySelector('#Pause-button'),
+rewindButton = document.querySelector('#fast-forward'),
+volSlider = document.querySelector('#VolumeControl');
 
-/* Styles for the drop zones */
-.drop-box {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
-    margin: 20px auto;
-    max-width: 600px;
+let draggedAnimals;
+
+//functions
+function handleStartDrag() {
+    //console.log("Started dragging this piece:", this)
+    draggedAnimals = this;
+    
 }
 
-.drop-zone {
-    min-height: 150px;
-    border: 2px dashed #aaa;
-    background-color: #f5f5f5;
-    border-radius: 10px;
+function handleDragOver(e) {
+    e.preventDefault();
+    //this will prevent the default dragover behaviour
+    //e is short for event, could be e, evt a well
+    console.log("dragged over me");
 }
 
-/* Styles for the draggable icons */
-.icon-container img {
-    width: 100%;
-    cursor: grab;
+function handleDrop(e) {
+    e.preventDefault();
+    console.log("dropped something on me");
+  
+    if (this.childElementCount == 1) {
+        return;
+      }
+ 
+    this.appendChild(draggedAnimals);
+
 }
 
-/* Styles for the active drag state of the icons */
-.icon-container img:active {
-    cursor: grabbing;
+function loadAudio() {
+    let currentSrc = `audio/${this.dataset.trackref}.mp3`;
+    theAudioEl.src = currentSrc;
+    theAudioEl.load();
+    playAudio;
 }
+
+function playAudio() {
+    theAudioEl.play();
+}
+
+function pauseAudio() {
+    theAudioEl.pause();
+}
+
+function restartAudio() {
+    theAudioEl.currentTime = 0;
+    playAudio();
+}
+
+function setVolume() {
+    theAudioEl.volume = (this.value/100);
+}
+
+
+//eventListener
+iconAnimals.forEach(animals => animals.addEventListener("dragstart", handleStartDrag));
+
+dropZones.forEach(zone => zone.addEventListener("dragover", handleDragOver));
+
+dropZones.forEach(zone => zone.addEventListener("drop", handleDrop));
+
+iconsCute.forEach(cute => cute.addEventListener('click', loadAudio));
+
+pauseButton.addEventListener('click', pauseAudio);
+
+playButton.addEventListener('click', playAudio);
+
+rewindButton.addEventListener('click', restartAudio);
+
+volSlider.addEventListener('change', setVolume);

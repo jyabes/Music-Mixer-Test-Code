@@ -10,20 +10,21 @@
     <body>
         <h1 class="hidden">Music Mixer</h1>
 
-        <!-- MOBILE START -->
-        <section class="spacer mobile">
-            <h2>Mobile classes</h2>
-            <p class="hidden">(Grid is equal to 4 columns at mobile)</p>
-            <h3 class="hidden">Span in a single row</h3>
-            
+      
+        <section class="spacer">
+            <h2 class="hidden">Ha Anh Le and Johnathan</h2>
+           
+            <!--Logo Animation-->
             <div class="grid-con background-container">
-                <div class="col-span-4">
+                <div class="col-span-4 m-col-span-2 l-col-span-2">
                     <img id="logo" src="./img/gif/logo_animation.gif" alt="logo" class="logo">
+                   
                 </div>
             </div>
 
+            <!--Buttons-->
             <div class="grid-con button">
-                <div class="col-span-1 btn">
+                <div class="col-span-1 m-col-span-3 l-col-span-3 btn">
                     <svg version="1.1" id="Play_button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                     y="0px" viewBox="0 0 400 400" style="enable-background:new 0 0 400 400;" xml:space="preserve">
                         <path id="Play" d="M156.11,109.83v190.38l140.67-95.19L156.11,109.83z M168.27,126.29l116.34,78.73l-116.34,78.73V126.29z"/>
@@ -41,7 +42,7 @@
                     </svg>  
                 </div>
 
-                <div class="col-span-1 btn">
+                <div class="col-span-1 m-col-span-3 l-col-span-3 btn">
                     <svg version="1.1" id="Pause-button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                     y="0px" viewBox="0 0 366 368" style="enable-background:new 0 0 366 368;" xml:space="preserve">
                     <g id="pause">
@@ -84,7 +85,7 @@
                     </svg>
                 </div>
 
-                <div class="col-span-1 btn">
+                <div class="col-span-1 m-col-span-3 l-col-span-3 btn">
                     <svg version="1.1" id="fast-forward" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
            y="0px" viewBox="0 0 800 800" style="enable-background:new 0 0 800 800;" xml:space="preserve">
            <g>
@@ -101,28 +102,33 @@
                 </div>
             </div>
 
+            <!--CD Player-->
             <div class="grid-con">
-                <div class="col-span-4">
+                <div class="col-span-4 m-col-span-12 l-col-span-12">
                     <img src="./img/png/table-mixer.png" alt="table mixer" class="table-mixer">
                     <img src="./img/gif/disc-2.gif" alt="logo" class="disc">
                 </div>
             </div>
+
+            <div class="volume">
+                <input type="range" max="1" min="0" step="0.1" id="VolumeControl">
+             </div>
 
             
 
             <!-- these are the draggable pieces -->
             <h3 class="hidden">draggable pieces</h3>
             <div class="grid-con icon-container">
-                <div class="col-span-1">
+                <div class="col-span-1 m-col-span-3 l-col-span-3">
                     <img data-trackref="1-drumloop" src="./img/png/dj_alien.png" alt="Icon 1" class="icon-left1" draggable="true">
                 </div>
-                <div class="col-span-1">
+                <div class="col-span-1 m-col-span-3 l-col-span-3">
                     <img data-trackref="2-uptempo" src="./img/png/dj-cat.png" alt="Icon 2" class="icon-left2" draggable="true">
                 </div>
-                <div class="col-span-1">
+                <div class="col-span-1 m-col-span-3 l-col-span-3">
                     <img data-trackref="3-drum-kick" src="./img/png/dj-astronaut.png" alt="Icon 3" class="icon-right1" draggable="true">
                 </div>
-                <div class="col-span-1">
+                <div class="col-span-1 m-col-span-3 l-col-span-3">
                     <img data-trackref="4-sad-chords" src="./img/png/dj-red-panda.png" alt="Icon 4" class="icon-right2" draggable="true">
                 </div>
             </div>
@@ -142,260 +148,10 @@
             <audio id="audio4" src="./audio/4-sad-chords.wav"></audio>
 
         </section>
-        <!-- MOBILE END -->
+     
 
 
-        <!-- TABLET START -->
-        <section class="spacer tablet">
-            <h2>Tablet Classes</h2>
-            <p class="hidden">(Grid is equal to 12 columns at tablet)</p>
-            <h3 class="hidden">Span in a single row</h3>
-            <div class="grid-con">
-                <div class="m-col-span-2">
-                    <img id="logo" src="./img/gif/logo_animation.gif" alt="logo" class="logo">
-                </div>
-            </div>
-
-            <div class="grid-con button">
-                <div class="m-col-span-3 btn">
-                    <svg version="1.1" id="Play_button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-           y="0px" viewBox="0 0 400 400" style="enable-background:new 0 0 400 400;" xml:space="preserve">
-            <path id="Play" d="M156.11,109.83v190.38l140.67-95.19L156.11,109.83z M168.27,126.29l116.34,78.73l-116.34,78.73V126.29z"/>
-            <polygon id="small-play" points="186.78,164.44 186.78,245.59 247.6,205.02 "/>
-            <g id="bgcircle">
-           <path d="M21.59,188.65C27.44,95.2,105.08,21.22,200,21.22S372.56,95.2,378.41,188.65h16.65C389.19,86.01,304.11,4.6,200,4.6
-          S10.81,86.01,4.93,188.65H21.59z"/>
-           <path d="M377.5,221.38c-10.57,88.66-86,157.4-177.5,157.4S33.07,310.04,22.5,221.38H5.77C16.42,319.24,99.31,395.4,200,395.4
-          s183.58-76.16,194.23-174.02H377.5z"/>
-           <circle cx="373.64" cy="188.65" r="21.43"/>
-           <circle cx="26.98" cy="218.19" r="21.21"/>
-           <polygon points="9.94,245.59 21.22,311.89 30.03,296.45 	"/>
-           <polygon points="394.48,180.89 388.11,102.02 375.33,113.67 	"/>
-            </g>
-            </svg>  
-                </div>
-                <div class="m-col-span-3 btn">
-                    <svg version="1.1" id="Pause-button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-           y="0px" viewBox="0 0 366 368" style="enable-background:new 0 0 366 368;" xml:space="preserve">
-           <g id="pause">
-           <path d="M166.12,120.29h-24.79c-6.86,0-12.42,5.56-12.42,12.42V239.7c0,6.86,5.56,12.42,12.42,12.42h24.79
-              c6.86,0,12.42-5.56,12.42-12.42V132.71C178.55,125.85,172.98,120.29,166.12,120.29z M168.24,240.08h-29.02V132.33h29.02V240.08z"/>
-           <path d="M225.49,120.29H200.7c-6.86,0-12.42,5.56-12.42,12.42V239.7c0,6.86,5.56,12.42,12.42,12.42h24.79
-              c6.86,0,12.42-5.56,12.42-12.42V132.71C237.91,125.85,232.35,120.29,225.49,120.29z M227.6,240.08h-29.02V132.33h29.02V240.08z"/>
-           </g>
-           <path id="bgcirclee" d="M185.69,8.62C87.14,8.62,7.25,88.51,7.25,187.06s79.89,178.44,178.44,178.44s178.44-79.89,178.44-178.44
-            S284.23,8.62,185.69,8.62z M185.69,343.17c-89.1,0-161.33-69.89-161.33-156.11S96.59,30.95,185.69,30.95s161.33,69.89,161.33,156.11
-            S274.79,343.17,185.69,343.17z"/>
-           <g id="outline">
-           <path d="M185.36,325.58L185.36,325.58c-3.76,0-6.81-3.05-6.81-6.81v-15.79c0-3.76,3.05-6.81,6.81-6.81l0,0
-              c3.76,0,6.81,3.05,6.81,6.81v15.79C192.17,322.54,189.12,325.58,185.36,325.58z"/>
-           <path d="M219.7,321.29L219.7,321.29c-3.65,0.92-7.35-1.3-8.27-4.94l-3.85-15.31c-0.92-3.65,1.3-7.35,4.94-8.27l0,0
-              c3.65-0.92,7.35,1.3,8.27,4.94l3.85,15.31C225.56,316.68,223.35,320.38,219.7,321.29z"/>
-           <path d="M253.6,308.55L253.6,308.55c-3.16,2.03-7.38,1.12-9.41-2.04l-8.54-13.28c-2.03-3.16-1.12-7.38,2.04-9.41h0
-              c3.16-2.03,7.38-1.12,9.41,2.04l8.54,13.28C257.68,302.3,256.77,306.51,253.6,308.55z"/>
-           <path d="M147.18,322.23L147.18,322.23c-3.62-1.04-5.71-4.81-4.67-8.42l4.35-15.17c1.04-3.62,4.81-5.71,8.42-4.67h0
-              c3.62,1.04,5.71,4.81,4.67,8.42l-4.35,15.17C154.57,321.18,150.8,323.27,147.18,322.23z"/>
-           <path d="M112.49,308.43L112.49,308.43c-3.13-2.08-3.99-6.31-1.91-9.44l8.73-13.15c2.08-3.13,6.31-3.99,9.44-1.91h0
-              c3.13,2.08,3.99,6.31,1.91,9.44l-8.73,13.15C119.86,309.66,115.63,310.51,112.49,308.43z"/>
-           <path d="M251.75,67.96L251.75,67.96c-1.27,3.54-5.17,5.38-8.71,4.1l-14.85-5.34c-3.54-1.27-5.38-5.17-4.1-8.71v0
-              c1.27-3.54,5.17-5.38,8.71-4.1l14.85,5.34C251.18,60.52,253.02,64.42,251.75,67.96z"/>
-           <path d="M324.42,182.92c0-41.56-18.19-78.84-47.01-104.4c0-0.03-0.01-0.05-0.01-0.07l-2.92-2.46c-0.3-0.25-0.59-0.5-0.89-0.74
-              l-4.93-4.14c-2.72-2.29-6.79-1.94-9.08,0.79l-0.12,0.14c-2.29,2.72-1.94,6.79,0.79,9.08l0.03,0.03c0.08,0.13,0.16,0.26,0.23,0.4
-              c0.68,0.48,1.34,0.98,2.01,1.48l11.14,9.36c0.03,0.03,0.06,0.05,0.09,0.07c24.02,22.69,39.02,54.83,39.02,90.48
-              c0,29.28-10.13,56.17-27.06,77.41c-0.4,0.26-0.77,0.56-1.12,0.9l-11.16,11.16c-2.66,2.66-2.66,6.97,0,9.63v0
-              c2.66,2.66,6.97,2.66,9.63,0l2.66-2.66c-0.01-0.02-0.02-0.05-0.03-0.07C309.66,254.25,324.42,220.33,324.42,182.92z"/>
-           <path d="M210.02,48.32c-1.49-1.49-3.75-3.24-6.57-3.99c-0.07-0.05-0.15-0.08-0.21-0.13c-0.36-0.05-0.73-0.08-1.09-0.13
-              c-0.13-0.02-0.26-0.05-0.39-0.06c-0.12-0.01-0.22-0.02-0.32-0.02c-5.45-0.66-11-1.04-16.63-1.04
-              c-77.11,0-139.61,62.51-139.61,139.61c0,38.48,15.6,73.29,40.79,98.53c0,0,0,0,0,0l0.27,0.27c0.09,0.09,0.18,0.18,0.27,0.27
-              c0,0,0,0,0,0l3.83,3.83c3.54,3.54,9.27,3.54,12.81,0h0c3.54-3.54,3.54-9.27,0-12.81l-10.75-10.75
-              c-17.87-21.54-28.63-49.18-28.63-79.36c0-68.75,55.74-124.49,124.49-124.49c5.08,0,10.07,0.34,14.99,0.94
-              c0.24-0.03,0.49-0.05,0.75-0.05c0.19,0,0.38,0.01,0.56,0.03c0.01-0.03,0.02-0.06,0.03-0.1l0.62,0.15c3.2,0.79,6.43-1.16,7.22-4.36
-              C213.06,52.19,212.01,49.69,210.02,48.32z"/>
-           <path d="M204.01,58.95l2.01,0.22L204.01,58.95z"/>
-           <path d="M203.24,44.19c0,0,6.88,2.81,7.78,5.43C211.91,52.24,203.24,44.19,203.24,44.19z"/>
-           </g>
-           </svg>
-                </div>
-                <div class="m-col-span-3 btn">
-                    <svg version="1.1" id="fast-forward" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-           y="0px" viewBox="0 0 800 800" style="enable-background:new 0 0 800 800;" xml:space="preserve">
-           <g>
-          <path id="ff" d="M245.9,507.1c5.1,2.7,11.4,2.2,16.1-1.2l63.4-46v33.5c0,5.9,3.3,11.2,8.5,13.7c5.1,2.7,11.4,2.2,16.1-1.2
-          l128.7-93.4c3.9-3,6.3-7.5,6.3-12.5c0-5-2.4-9.7-6.3-12.6l-128.7-93.5c-2.7-1.9-5.9-2.8-9.1-2.8c-2.3,0-4.7,0.5-7,1.7
-          c-5.2,2.5-8.5,7.9-8.5,13.7V340L262,293.9c-2.7-1.9-5.9-2.8-9.1-2.8c-2.4,0-4.8,0.5-7,1.7c-5.2,2.5-8.5,7.9-8.5,13.7v186.9
-          C237.4,499.3,240.7,504.6,245.9,507.1z"/>
-          <path id="bgcircles" d="M400,800c220.9,0,400-179,400-400C800,179.1,620.9,0,400,0C179.1,0,0,179.1,0,400C0,621,179.1,800,400,800z
-         M400,66.8C584,66.8,733.2,216,733.2,400c0,184-149.2,333.1-333.2,333.1S66.8,584,66.8,400C66.8,216,216,66.8,400,66.8z"/>
-          <path id="line" d="M517.4,503.3h37.1c4.4,0,8.1-3.8,8.1-8.2V304.8c0-4.5-3.7-8.1-8.1-8.1h-37.1c-4.5,0-8.2,3.6-8.2,8.1v190.2
-         C509.2,499.6,512.9,503.3,517.4,503.3z"/>
-           </g>
-           </svg>
-                </div>
-            </div>
-
-
-            <div class="grid-con">
-                <div class="m-col-span-12">
-                    <img src="./img/png/table-mixer.png" alt="table mixer" class="table-mixer">
-                </div>
-            </div>
-            <div class="grid-con">
-                <div class="m-col-span-12">
-                    <img src="./img/gif/disc-2.gif" alt="logo" class="disc">
-                </div>
-            </div>
-                <!-- these are the draggable pieces -->
-            <h3 class="hidden">draggable pieces</h3>
-            <div class="grid-con icon-container">
-                <div class="m-col-span-3">
-                    <img data-trackref="1-drumloop" src="./img/png/dj_alien.png" alt="Icon 1" class="icon-left1">
-                </div>
-                <div class="m-col-span-3">
-                    <img data-trackref="2-uptempo" src="./img/png/dj-cat.png" alt="Icon 2" class="icon-left2">
-                </div>
-                <div class="m-col-span-3">
-                    <img data-trackref="3-drum-kick" src="./img/png/dj-astronaut.png" alt="Icon 3" class="icon-right1">
-                </div>
-                <div class="m-col-span-3">
-                    <img data-trackref="4-sad-chords" src="./img/png/dj-red-panda.png" alt="Icon 4" class="icon-right2">
-                </div>
-            </div>
-            <!-- these are the dropzones -->
-            <div class="drop-box">
-                <div class="drop-zone tl"></div>
-                <div class="drop-zone tr"></div>
-                <div class="drop-zone bl"></div>
-                <div class="drop-zone br"></div>
-             </div>
-
-         </section>
-        <!-- TABLET END -->
-
-        <!-- DESKTOP START -->
-        <section class="spacer desktop">
-            <h2>Desktop classes</h2>
-            <p class="hidden">(Grid is equal to 12 columns at desktop)</p>
-            <h3 class="hidden">Span single row</h3>
-
-            <div class="grid-con">
-                <div class="l-col-span-2">
-                    <img id="logo" src="./img/gif/logo_animation.gif" alt="logo" class="logo">
-                </div>
-            </div>
-
-            <div class="grid-con button">
-                <div class="col-span-3 btn">
-                    <svg version="1.1" id="Play_button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-           y="0px" viewBox="0 0 400 400" style="enable-background:new 0 0 400 400;" xml:space="preserve">
-            <path id="Play" d="M156.11,109.83v190.38l140.67-95.19L156.11,109.83z M168.27,126.29l116.34,78.73l-116.34,78.73V126.29z"/>
-            <polygon id="small-play" points="186.78,164.44 186.78,245.59 247.6,205.02 "/>
-            <g id="bgcircle">
-           <path d="M21.59,188.65C27.44,95.2,105.08,21.22,200,21.22S372.56,95.2,378.41,188.65h16.65C389.19,86.01,304.11,4.6,200,4.6
-          S10.81,86.01,4.93,188.65H21.59z"/>
-           <path d="M377.5,221.38c-10.57,88.66-86,157.4-177.5,157.4S33.07,310.04,22.5,221.38H5.77C16.42,319.24,99.31,395.4,200,395.4
-          s183.58-76.16,194.23-174.02H377.5z"/>
-           <circle cx="373.64" cy="188.65" r="21.43"/>
-           <circle cx="26.98" cy="218.19" r="21.21"/>
-           <polygon points="9.94,245.59 21.22,311.89 30.03,296.45 	"/>
-           <polygon points="394.48,180.89 388.11,102.02 375.33,113.67 	"/>
-            </g>
-            </svg>  
-                </div>
-                <div class="col-span-3 btn">
-                    <svg version="1.1" id="Pause-button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-           y="0px" viewBox="0 0 366 368" style="enable-background:new 0 0 366 368;" xml:space="preserve">
-           <g id="pause">
-           <path d="M166.12,120.29h-24.79c-6.86,0-12.42,5.56-12.42,12.42V239.7c0,6.86,5.56,12.42,12.42,12.42h24.79
-              c6.86,0,12.42-5.56,12.42-12.42V132.71C178.55,125.85,172.98,120.29,166.12,120.29z M168.24,240.08h-29.02V132.33h29.02V240.08z"/>
-           <path d="M225.49,120.29H200.7c-6.86,0-12.42,5.56-12.42,12.42V239.7c0,6.86,5.56,12.42,12.42,12.42h24.79
-              c6.86,0,12.42-5.56,12.42-12.42V132.71C237.91,125.85,232.35,120.29,225.49,120.29z M227.6,240.08h-29.02V132.33h29.02V240.08z"/>
-           </g>
-           <path id="bgcirclee" d="M185.69,8.62C87.14,8.62,7.25,88.51,7.25,187.06s79.89,178.44,178.44,178.44s178.44-79.89,178.44-178.44
-            S284.23,8.62,185.69,8.62z M185.69,343.17c-89.1,0-161.33-69.89-161.33-156.11S96.59,30.95,185.69,30.95s161.33,69.89,161.33,156.11
-            S274.79,343.17,185.69,343.17z"/>
-           <g id="outline">
-           <path d="M185.36,325.58L185.36,325.58c-3.76,0-6.81-3.05-6.81-6.81v-15.79c0-3.76,3.05-6.81,6.81-6.81l0,0
-              c3.76,0,6.81,3.05,6.81,6.81v15.79C192.17,322.54,189.12,325.58,185.36,325.58z"/>
-           <path d="M219.7,321.29L219.7,321.29c-3.65,0.92-7.35-1.3-8.27-4.94l-3.85-15.31c-0.92-3.65,1.3-7.35,4.94-8.27l0,0
-              c3.65-0.92,7.35,1.3,8.27,4.94l3.85,15.31C225.56,316.68,223.35,320.38,219.7,321.29z"/>
-           <path d="M253.6,308.55L253.6,308.55c-3.16,2.03-7.38,1.12-9.41-2.04l-8.54-13.28c-2.03-3.16-1.12-7.38,2.04-9.41h0
-              c3.16-2.03,7.38-1.12,9.41,2.04l8.54,13.28C257.68,302.3,256.77,306.51,253.6,308.55z"/>
-           <path d="M147.18,322.23L147.18,322.23c-3.62-1.04-5.71-4.81-4.67-8.42l4.35-15.17c1.04-3.62,4.81-5.71,8.42-4.67h0
-              c3.62,1.04,5.71,4.81,4.67,8.42l-4.35,15.17C154.57,321.18,150.8,323.27,147.18,322.23z"/>
-           <path d="M112.49,308.43L112.49,308.43c-3.13-2.08-3.99-6.31-1.91-9.44l8.73-13.15c2.08-3.13,6.31-3.99,9.44-1.91h0
-              c3.13,2.08,3.99,6.31,1.91,9.44l-8.73,13.15C119.86,309.66,115.63,310.51,112.49,308.43z"/>
-           <path d="M251.75,67.96L251.75,67.96c-1.27,3.54-5.17,5.38-8.71,4.1l-14.85-5.34c-3.54-1.27-5.38-5.17-4.1-8.71v0
-              c1.27-3.54,5.17-5.38,8.71-4.1l14.85,5.34C251.18,60.52,253.02,64.42,251.75,67.96z"/>
-           <path d="M324.42,182.92c0-41.56-18.19-78.84-47.01-104.4c0-0.03-0.01-0.05-0.01-0.07l-2.92-2.46c-0.3-0.25-0.59-0.5-0.89-0.74
-              l-4.93-4.14c-2.72-2.29-6.79-1.94-9.08,0.79l-0.12,0.14c-2.29,2.72-1.94,6.79,0.79,9.08l0.03,0.03c0.08,0.13,0.16,0.26,0.23,0.4
-              c0.68,0.48,1.34,0.98,2.01,1.48l11.14,9.36c0.03,0.03,0.06,0.05,0.09,0.07c24.02,22.69,39.02,54.83,39.02,90.48
-              c0,29.28-10.13,56.17-27.06,77.41c-0.4,0.26-0.77,0.56-1.12,0.9l-11.16,11.16c-2.66,2.66-2.66,6.97,0,9.63v0
-              c2.66,2.66,6.97,2.66,9.63,0l2.66-2.66c-0.01-0.02-0.02-0.05-0.03-0.07C309.66,254.25,324.42,220.33,324.42,182.92z"/>
-           <path d="M210.02,48.32c-1.49-1.49-3.75-3.24-6.57-3.99c-0.07-0.05-0.15-0.08-0.21-0.13c-0.36-0.05-0.73-0.08-1.09-0.13
-              c-0.13-0.02-0.26-0.05-0.39-0.06c-0.12-0.01-0.22-0.02-0.32-0.02c-5.45-0.66-11-1.04-16.63-1.04
-              c-77.11,0-139.61,62.51-139.61,139.61c0,38.48,15.6,73.29,40.79,98.53c0,0,0,0,0,0l0.27,0.27c0.09,0.09,0.18,0.18,0.27,0.27
-              c0,0,0,0,0,0l3.83,3.83c3.54,3.54,9.27,3.54,12.81,0h0c3.54-3.54,3.54-9.27,0-12.81l-10.75-10.75
-              c-17.87-21.54-28.63-49.18-28.63-79.36c0-68.75,55.74-124.49,124.49-124.49c5.08,0,10.07,0.34,14.99,0.94
-              c0.24-0.03,0.49-0.05,0.75-0.05c0.19,0,0.38,0.01,0.56,0.03c0.01-0.03,0.02-0.06,0.03-0.1l0.62,0.15c3.2,0.79,6.43-1.16,7.22-4.36
-              C213.06,52.19,212.01,49.69,210.02,48.32z"/>
-           <path d="M204.01,58.95l2.01,0.22L204.01,58.95z"/>
-           <path d="M203.24,44.19c0,0,6.88,2.81,7.78,5.43C211.91,52.24,203.24,44.19,203.24,44.19z"/>
-           </g>
-           </svg>
-                </div>
-                <div class="col-span-3 btn">
-                    <svg version="1.1" id="fast-forward" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-           y="0px" viewBox="0 0 800 800" style="enable-background:new 0 0 800 800;" xml:space="preserve">
-           <g>
-          <path id="ff" d="M245.9,507.1c5.1,2.7,11.4,2.2,16.1-1.2l63.4-46v33.5c0,5.9,3.3,11.2,8.5,13.7c5.1,2.7,11.4,2.2,16.1-1.2
-          l128.7-93.4c3.9-3,6.3-7.5,6.3-12.5c0-5-2.4-9.7-6.3-12.6l-128.7-93.5c-2.7-1.9-5.9-2.8-9.1-2.8c-2.3,0-4.7,0.5-7,1.7
-          c-5.2,2.5-8.5,7.9-8.5,13.7V340L262,293.9c-2.7-1.9-5.9-2.8-9.1-2.8c-2.4,0-4.8,0.5-7,1.7c-5.2,2.5-8.5,7.9-8.5,13.7v186.9
-          C237.4,499.3,240.7,504.6,245.9,507.1z"/>
-          <path id="bgcircles" d="M400,800c220.9,0,400-179,400-400C800,179.1,620.9,0,400,0C179.1,0,0,179.1,0,400C0,621,179.1,800,400,800z
-         M400,66.8C584,66.8,733.2,216,733.2,400c0,184-149.2,333.1-333.2,333.1S66.8,584,66.8,400C66.8,216,216,66.8,400,66.8z"/>
-          <path id="line" d="M517.4,503.3h37.1c4.4,0,8.1-3.8,8.1-8.2V304.8c0-4.5-3.7-8.1-8.1-8.1h-37.1c-4.5,0-8.2,3.6-8.2,8.1v190.2
-         C509.2,499.6,512.9,503.3,517.4,503.3z"/>
-           </g>
-           </svg>
-                </div>
-            </div>
-            <div class="grid-con">
-                <div class="l-col-span-12">
-                    <img src="./img/png/table-mixer.png" alt="table mixer" class="table-mixer">
-                </div>
-            </div>
-            <div class="grid-con">
-                <div class="l-col-span-12">
-                    <img src="./img/gif/disc-2.gif" alt="logo" class="disc">
-                </div>
-            </div>
-
-
-            <!-- these are the draggable pieces -->
-            <h3 class="hidden">draggable pieces</h3>
-            <div class="grid-con icon-container">
-                <div class="l-col-span-3">
-                    <img data-trackref="1-drumloop" src="./img/png/dj_alien.png" alt="Icon 1" class="icon-left1">
-                </div>
-                <div class="l-col-span-3">
-                    <img data-trackref="2-uptempo" src="./img/png/dj-cat.png" alt="Icon 2" class="icon-left2">
-                </div>
-                <div class="l-col-span-3">
-                    <img data-trackref="3-drum-kick" src="./img/png/dj-astronaut.png" alt="Icon 3" class="icon-right1">
-                </div>
-                <div class="l-col-span-3">
-                    <img data-trackref="4-sad-chords" src="./img/png/dj-red-panda.png" alt="Icon 4" class="icon-right2">
-                </div>
-            </div>
-            <!-- these are the dropzones -->
-            <div class="drop-box">
-                <div class="drop-zone tl"></div>
-                <div class="drop-zone tr"></div>
-                <div class="drop-zone bl"></div>
-                <div class="drop-zone br"></div>
-             </div>
-        </section>
-        <!-- DESKTOP END -->
+           
 
         <script src="js/main.js"></script>
     </body>

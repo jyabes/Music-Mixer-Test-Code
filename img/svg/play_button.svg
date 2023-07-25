@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="PLAY_BUTTON" data-name="PLAY BUTTON" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 444.83 317.02">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #4f4f4f;
+      }
+
+      .cls-2 {
+        fill: #787878;
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke: #808285;
+        stroke-miterlimit: 10;
+        stroke-width: 8.36px;
+      }
+    </style>
+  </defs>
+  <g id="elipse_copy" data-name="elipse copy">
+    <circle class="cls-3" cx="158.51" cy="158.51" r="154.33"/>
+  </g>
+  <g id="Layer_2" data-name="Layer 2">
+    <path class="cls-1" d="m100.2,262.25l-.42-202.89c-.02-8.05,9.02-12.79,15.63-8.2l134.79,93.59c5.44,3.78,5.74,11.72.6,15.9l-134.36,109.31c-6.5,5.29-16.22.67-16.24-7.7Z"/>
+  </g>
+  <g id="Layer_2_copy_2" data-name="Layer 2 copy 2">
+    <path class="cls-2" d="m99.98,160.78l-.2-101.43c-.02-8.05,9.02-12.79,15.63-8.2l134.79,93.59c5.44,3.78,5.74,11.72.6,15.9,0,0-36.31-11.22-77.69-11.22s-73.13,11.36-73.13,11.36Z"/>
+  </g>
+</svg>

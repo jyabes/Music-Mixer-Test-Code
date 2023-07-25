@@ -1,0 +1,905 @@
+/* 
+    CSS Guide 
+
+    1.  General Styles (Normalize)
+
+ */
+
+
+ /* 1. ---General Styles--- */
+
+ body {
+    background-image: url("..//img/jpg/background-2.jpg");
+    background-size:100%;
+    background-repeat: no-repeat;
+    background-color: #000;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: #000;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+img, embed, object, video, picture {
+    max-width: 100%;
+}
+
+p, h1, h2, h3, h4, h5 {
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+    transition: all .5s ease-in-out;
+}
+
+input, textarea {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+}
+
+section h2, section h3, section p {
+    padding-left: 15px;
+}
+
+.spacer {
+    margin-top: 60px;
+}
+
+.txt-spacer {
+    margin-top: 30px;
+}
+
+    /* ---End of General Styles--- */
+
+.background-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.logo {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+    z-index: 1;
+    height: auto;
+    object-fit: contain;
+}
+
+.disc {
+    position: absolute;
+    width: 50%;
+    right: 20%;
+    left: 25%;
+    top: 15%;
+    height: auto;
+    object-fit: contain;
+}
+
+.table-mixer {
+    position: absolute;
+    width: 60%;
+    top: 10%;
+    left: 20%;
+    height: auto;
+    object-fit: contain;
+    z-index: 0;
+}
+
+/* icon */
+ 
+.icon {
+    width: 50px; /* Adjust the width of the icons */
+    height: auto; /* This maintains the aspect ratio of the icons */
+ }
+
+
+.icon-left1 {
+    float: left;
+    width: 30px ;
+    height: auto;
+    margin-bottom: 19px;
+   
+ }
+.icon-left2 {
+    float: left;
+    width: 35px ;
+    height: auto;
+    margin-right: 100px;
+    margin-bottom: 90px;
+    display: block;
+ }
+
+.icon-right1 {
+    float: right;
+    width: 30px ;
+    height: auto;
+    margin-left: 150px;
+    margin-bottom: 90px;
+ }
+.icon-right2 {
+    float: right;
+    width: 40px ;
+    height: auto;
+    margin-bottom: 90px;
+ }
+
+
+
+/* Buttons */
+.button {
+    position: absolute;
+    bottom: 326px; /* Adjust the vertical position as needed */
+    left: 45%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    z-index: 2;
+    width: 500px;
+    height: 150px;
+  }
+  
+.btn {
+    width: 20px; /* Adjust the width of the buttons */
+    height: 20px; /* Adjust the height of the buttons */
+    border-radius: 10px;
+    transition: 0.3s all ease-in-out;
+    text-shadow: 0px 0px 50px #0072ff;
+    
+  }
+
+
+#Play_button, #Pause-button,#fast-forward{
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    border: #fff solid 2px;
+    transition: 0.3s all ease-in-out;
+    background: #18191f;
+    padding: 0px 2px;
+    margin: 0 20px;
+    position: fixed;
+
+}
+#Play_button, #Pause-button, #fast-forward{
+    border: #ffee10 solid 2px;
+    box-shadow: 2px 2px 2px black,
+                10px 10px 12px black,
+                inset 2px 2px 10px black,
+                inset 2px 2px 10px black,
+                inset 2px 2px 10px black,
+                inset 2px 2px 10px black;
+    text-shadow: 0px 0px 50px #0072ff;     
+    animation: animate 3s linear infinite;                    
+}
+
+#Pause-button{
+    animation-delay: 0.3s;
+}
+
+#fast-forward{
+    animation-delay: 0.7s;
+}
+
+@keyframes animate {
+    from{
+        filter: hue-rotate(0deg);
+    }
+    to{
+        filter: hue-rotate(360deg);
+    }
+}
+#bgcircle, #bgcirclee, #bgcircles {
+    fill:rgb(222, 221, 221);
+    font-size: 15rem !important;
+}
+
+#bgcircle, #bgcirclee, #bgcircles {
+    filter: drop-shadow(0 0 5px #ffee10);
+}
+
+#small-play, #pause, #ff{
+    fill: white;
+    font-size: 15rem !important;
+}
+
+#small-play, #pause, #ff {
+    filter: drop-shadow(0 0 5px #ffee10);
+}
+
+#Play, #outline, #line {
+    fill: white;
+    font-size: 15rem !important;
+}
+
+#Play, #outline, #line {
+    filter: drop-shadow(0 0 5px #fff);
+}
+
+
+/* Styles for the draggable icons */
+.icon-container {
+    margin-top: 160px;
+    width: 50%;
+    cursor: grab;
+
+}
+
+.icon-container img {
+    width: 50%;
+    cursor: grab;
+}
+
+/* Styles for the active drag state of the icons */
+.icon-container img:active {
+    cursor: grabbing;
+}
+/* Styles for the drop zones */
+.drop-box {
+    background-image: none;
+	background-repeat: no-repeat;
+	display: flex;
+	border: medium solid #000;
+	background-color: #000;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 600px;
+    margin-left: 10px;
+}
+
+.drop-zone {
+    min-height: 50px;
+    min-width: 50px;
+    border: 2px solid #15d4ff;
+    background-color: black;
+    border-radius: 10px;
+}
+
+/* Styles for the draggable icons */
+.icon-container img {
+    width: 100%;
+    cursor: grab;
+}
+
+/* Styles for the active drag state of the icons */
+.icon-container img:active {
+    cursor: grabbing;
+}
+
+/* Volume Control */
+#VolumeControl {
+    -webkit-appearance: none;
+    width: 200px;
+    background-color: transparent;
+    position: absolute;
+    z-index: 1;
+    transform: rotate(-90deg) scale(.25);
+    left: 150px;
+    top:130px;
+    border: 6px solid white;
+    border-radius: 3px;
+}
+#VolumeControl:focus {
+    outline: none;
+}
+#VolumeControl::-ms-track{
+    width: 100%;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+
+}
+
+#VolumeControl::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    cursor: pointer;
+    width: 40px;
+    height: 70px;
+    background-color:#707070;
+    border: none;
+    border-radius: 2px ;
+    margin-top: -4px;
+}
+#VolumeControl::-moz-range-thumb{
+    cursor: pointer;
+    width: 40px;
+    height: 70px;
+    background-color:   #d6d6d6;
+    border: none;
+    border-radius: 2px;
+
+}
+#VolumeControl::-webkit-slider-runnable-track {
+    background-color:#333533;
+    border: none;
+    margin: -30px;
+}
+#VolumeControl::-moz-range-track {
+    background-color: #333533;
+    border: 30px solid black;
+    margin: 2px solid #d6d6d6;
+}
+
+
+
+
+/* 3. ---Tablet Library Styles--- */
+
+@media screen and (min-width: 768px) {
+    .background-container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    
+    .logo {
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 20%;
+        z-index: 1;
+        height: auto;
+        object-fit: contain;
+    }
+    
+    .disc {
+        position: absolute;
+        width: 50%;
+        right: 20%;
+        left: 25%;
+        top: 20%;
+        height: auto;
+        object-fit: contain;
+    }
+    
+    .table-mixer {
+        position: absolute;
+        width: 60%;
+        top: 10%;
+        left: 20%;
+        height: auto;
+        object-fit: contain;
+        z-index: 0;
+    }
+    
+    /* icon */
+     
+    .icon {
+        width: 50px; /* Adjust the width of the icons */
+        height: auto; /* This maintains the aspect ratio of the icons */
+     }
+    
+    
+    .icon-left1 {
+        float: left;
+        width: 30px ;
+        height: auto;
+        margin-bottom: 19px;
+       
+     }
+    .icon-left2 {
+        float: left;
+        width: 35px ;
+        height: auto;
+        margin-right: 100px;
+        margin-bottom: 90px;
+        display: block;
+     }
+    
+    .icon-right1 {
+        float: right;
+        width: 30px ;
+        height: auto;
+        margin-left: 150px;
+        margin-bottom: 90px;
+     }
+    .icon-right2 {
+        float: right;
+        width: 40px ;
+        height: auto;
+        margin-bottom: 90px;
+     }
+    
+    
+    
+    /* Buttons */
+    .button {
+        position: absolute;
+        bottom: 170px; /* Adjust the vertical position as needed */
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        z-index: 2;
+        width: 500px;
+        height: 150px;
+      }
+      
+    .btn {
+        width: 50px; /* Adjust the width of the buttons */
+        height: 50px; /* Adjust the height of the buttons */
+        border-radius: 10px;
+        transition: 0.3s all ease-in-out;
+        text-shadow: 0px 0px 50px #0072ff;
+        
+      }
+    
+    
+    #Play_button, #Pause-button,#fast-forward{
+        width: 50px;
+        height: 50px;
+        border-radius: 30px;
+        border: #fff solid 2px;
+        transition: 0.3s all ease-in-out;
+        background: #18191f;
+        padding: 0px 2px;
+        margin: 0 20px;
+        position: fixed;
+    
+    }
+    #Play_button, #Pause-button, #fast-forward{
+        border: #ffee10 solid 2px;
+        box-shadow: 2px 2px 2px black,
+                    10px 10px 12px black,
+                    inset 2px 2px 10px black,
+                    inset 2px 2px 10px black,
+                    inset 2px 2px 10px black,
+                    inset 2px 2px 10px black;
+        text-shadow: 0px 0px 50px #0072ff;     
+        animation: animate 3s linear infinite;                    
+    }
+    
+    #Pause-button{
+        animation-delay: 0.3s;
+    }
+    
+    #fast-forward{
+        animation-delay: 0.7s;
+    }
+    
+    @keyframes animate {
+        from{
+            filter: hue-rotate(0deg);
+        }
+        to{
+            filter: hue-rotate(360deg);
+        }
+    }
+    #bgcircle, #bgcirclee, #bgcircles {
+        fill:rgb(222, 221, 221);
+        font-size: 15rem !important;
+    }
+    
+    #bgcircle, #bgcirclee, #bgcircles {
+        filter: drop-shadow(0 0 5px #ffee10);
+    }
+    
+    #small-play, #pause, #ff{
+        fill: white;
+        font-size: 15rem !important;
+    }
+    
+    #small-play, #pause, #ff {
+        filter: drop-shadow(0 0 5px #ffee10);
+    }
+    
+    #Play, #outline, #line {
+        fill: white;
+        font-size: 15rem !important;
+    }
+    
+    #Play, #outline, #line {
+        filter: drop-shadow(0 0 5px #fff);
+    }
+    
+    
+    /* Styles for the draggable icons */
+    .icon-container {
+        margin-top: 250px;
+        width: 50%;
+        cursor: grab;
+    
+    }
+    
+    .icon-container img {
+        width: 50%;
+        cursor: grab;
+    }
+    
+    /* Styles for the active drag state of the icons */
+    .icon-container img:active {
+        cursor: grabbing;
+    }
+    /* Styles for the drop zones */
+    .drop-box {
+        background-image: none;
+        background-repeat: no-repeat;
+        display: flex;
+        border: medium solid #000;
+        background-color: #000;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        margin: 20px auto;
+        max-width: 600px;
+        margin-left: 50px;
+    }
+    
+    .drop-zone {
+        min-height: 50px;
+        min-width: 50px;
+        border: 2px solid #15d4ff;
+        background-color: black;
+        border-radius: 10px;
+    }
+    
+    /* Styles for the draggable icons */
+    .icon-container img {
+        width: 100%;
+        cursor: grab;
+    }
+    
+    /* Styles for the active drag state of the icons */
+    .icon-container img:active {
+        cursor: grabbing;
+    }
+    /* Volume Control */
+#VolumeControl {
+    -webkit-appearance: none;
+    width: 250px;
+    background-color: transparent;
+    position: absolute;
+    z-index: 1;
+    transform: rotate(-90deg) scale(.25);
+    left: 240px;
+    top:160px;
+    border: 6px solid white;
+    border-radius: 3px;
+}
+#VolumeControl:focus {
+    outline: none;
+}
+#VolumeControl::-ms-track{
+    width: 100%;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+
+}
+
+#VolumeControl::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    cursor: pointer;
+    width: 40px;
+    height: 70px;
+    background-color:#707070;
+    border: none;
+    border-radius: 2px ;
+    margin-top: -4px;
+}
+#VolumeControl::-moz-range-thumb{
+    cursor: pointer;
+    width: 40px;
+    height: 70px;
+    background-color:   #d6d6d6;
+    border: none;
+    border-radius: 2px;
+
+}
+#VolumeControl::-webkit-slider-runnable-track {
+    background-color:#333533;
+    border: none;
+    margin: -30px;
+}
+#VolumeControl::-moz-range-track {
+    background-color: #333533;
+    border: 30px solid black;
+    margin: 2px solid #d6d6d6;
+}
+
+    
+}
+
+
+
+
+/* 4. ---Desktop Library Styles--- */
+
+@media screen and (min-width: 1200px) {
+    .background-container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    
+    .logo {
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 20%;
+        z-index: 1;
+        height: auto;
+        object-fit: contain;
+    }
+    
+    .disc {
+        position: absolute;
+        width: 50%;
+        right: 20%;
+        left: 25%;
+        top: 20%;
+        height: auto;
+        object-fit: contain;
+    }
+    
+    .table-mixer {
+        position: absolute;
+        width: 60%;
+        top: 10%;
+        left: 20%;
+        height: auto;
+        object-fit: contain;
+        z-index: 0;
+    }
+    
+    /* icon */
+     
+    .icon {
+        width: 50px; /* Adjust the width of the icons */
+        height: auto; /* This maintains the aspect ratio of the icons */
+     }
+    
+    
+    .icon-left1 {
+        float: left;
+        width: 30px ;
+        height: auto;
+        margin-bottom: 19px;
+       
+     }
+    .icon-left2 {
+        float: left;
+        width: 35px ;
+        height: auto;
+        margin-right: 100px;
+        margin-bottom: 90px;
+        display: block;
+     }
+    
+    .icon-right1 {
+        float: right;
+        width: 30px ;
+        height: auto;
+        margin-left: 150px;
+        margin-bottom: 90px;
+     }
+    .icon-right2 {
+        float: right;
+        width: 40px ;
+        height: auto;
+        margin-bottom: 90px;
+     }
+    
+    
+    
+    /* Buttons */
+    .button {
+        position: absolute;
+        bottom: 300px; /* Adjust the vertical position as needed */
+        left: 45%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 70px;
+        z-index: 2;
+        width: 500px;
+        height: 150px;
+      }
+      
+    .btn {
+        width: 20px; /* Adjust the width of the buttons */
+        height: 20px; /* Adjust the height of the buttons */
+        border-radius: 10px;
+        transition: 0.3s all ease-in-out;
+        text-shadow: 0px 0px 50px #0072ff;
+        
+      }
+    
+    
+    #Play_button, #Pause-button,#fast-forward{
+        width: 70px;
+        height: 70px;
+        border-radius: 30px;
+        border: #fff solid 2px;
+        transition: 0.3s all ease-in-out;
+        background: #18191f;
+        padding: 0px 2px;
+        margin: 0 20px;
+        position: fixed;
+    
+    }
+    #Play_button, #Pause-button, #fast-forward{
+        border: #ffee10 solid 2px;
+        box-shadow: 2px 2px 2px black,
+                    10px 10px 12px black,
+                    inset 2px 2px 10px black,
+                    inset 2px 2px 10px black,
+                    inset 2px 2px 10px black,
+                    inset 2px 2px 10px black;
+        text-shadow: 0px 0px 50px #0072ff;     
+        animation: animate 3s linear infinite;                    
+    }
+    
+    #Pause-button{
+        animation-delay: 0.3s;
+    }
+    
+    #fast-forward{
+        animation-delay: 0.7s;
+    }
+    
+    @keyframes animate {
+        from{
+            filter: hue-rotate(0deg);
+        }
+        to{
+            filter: hue-rotate(360deg);
+        }
+    }
+    #bgcircle, #bgcirclee, #bgcircles {
+        fill:rgb(222, 221, 221);
+        font-size: 15rem !important;
+    }
+    
+    #bgcircle, #bgcirclee, #bgcircles {
+        filter: drop-shadow(0 0 5px #ffee10);
+    }
+    
+    #small-play, #pause, #ff{
+        fill: white;
+        font-size: 15rem !important;
+    }
+    
+    #small-play, #pause, #ff {
+        filter: drop-shadow(0 0 5px #ffee10);
+    }
+    
+    #Play, #outline, #line {
+        fill: white;
+        font-size: 15rem !important;
+    }
+    
+    #Play, #outline, #line {
+        filter: drop-shadow(0 0 5px #fff);
+    }
+    
+    
+    /* Styles for the draggable icons */
+    .icon-container {
+        margin-top: 400px;
+        width: 50%;
+        cursor: grab;
+    
+    }
+    
+    .icon-container img {
+        width: 50%;
+        cursor: grab;
+    }
+    
+    /* Styles for the active drag state of the icons */
+    .icon-container img:active {
+        cursor: grabbing;
+    }
+    /* Styles for the drop zones */
+    .drop-box {
+        background-image: none;
+        background-repeat: no-repeat;
+        display: flex;
+        border: medium solid #000;
+        background-color: #000;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        margin: 20px auto;
+        max-width: 600px;
+        margin-left: 300px;
+    }
+    
+    .drop-zone {
+        min-height: 150px;
+        min-width: 150px;
+        border: 2px solid #15d4ff;
+        background-color: black;
+        border-radius: 10px;
+    }
+    
+    /* Styles for the draggable icons */
+    .icon-container img {
+        width: 100%;
+        cursor: grab;
+    }
+    
+    /* Styles for the active drag state of the icons */
+    .icon-container img:active {
+        cursor: grabbing;
+    }
+     /* Volume Control */
+#VolumeControl {
+    -webkit-appearance: none;
+    width: 250px;
+    background-color: transparent;
+    position: absolute;
+    z-index: 1;
+    transform: rotate(-90deg) scale(.25);
+    left: 240px;
+    top:160px;
+    border: 6px solid white;
+    border-radius: 3px;
+}
+#VolumeControl:focus {
+    outline: none;
+}
+#VolumeControl::-ms-track{
+    width: 100%;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+
+}
+
+#VolumeControl::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    cursor: pointer;
+    width: 40px;
+    height: 70px;
+    background-color:#707070;
+    border: none;
+    border-radius: 2px ;
+    margin-top: -4px;
+}
+#VolumeControl::-moz-range-thumb{
+    cursor: pointer;
+    width: 40px;
+    height: 70px;
+    background-color:   #d6d6d6;
+    border: none;
+    border-radius: 2px;
+
+}
+#VolumeControl::-webkit-slider-runnable-track {
+    background-color:#333533;
+    border: none;
+    margin: -30px;
+}
+#VolumeControl::-moz-range-track {
+    background-color: #333533;
+    border: 30px solid black;
+    margin: 2px solid #d6d6d6;
+}
+
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Play_button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 400 400" style="enable-background:new 0 0 400 400;" xml:space="preserve">
+<path id="Play" d="M156.11,109.83v190.38l140.67-95.19L156.11,109.83z M168.27,126.29l116.34,78.73l-116.34,78.73V126.29z"/>
+<polygon id="small-play" points="186.78,164.44 186.78,245.59 247.6,205.02 "/>
+<g id="bgcircle">
+	<path d="M21.59,188.65C27.44,95.2,105.08,21.22,200,21.22S372.56,95.2,378.41,188.65h16.65C389.19,86.01,304.11,4.6,200,4.6
+		S10.81,86.01,4.93,188.65H21.59z"/>
+	<path d="M377.5,221.38c-10.57,88.66-86,157.4-177.5,157.4S33.07,310.04,22.5,221.38H5.77C16.42,319.24,99.31,395.4,200,395.4
+		s183.58-76.16,194.23-174.02H377.5z"/>
+	<circle cx="373.64" cy="188.65" r="21.43"/>
+	<circle cx="26.98" cy="218.19" r="21.21"/>
+	<polygon points="9.94,245.59 21.22,311.89 30.03,296.45 	"/>
+	<polygon points="394.48,180.89 388.11,102.02 375.33,113.67 	"/>
+</g>
+</svg>

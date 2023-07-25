@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="STOP_BUTTON" data-name="STOP BUTTON" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 317.02 317.02">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #4f4f4f;
+      }
+
+      .cls-2 {
+        fill: #787878;
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke: #808285;
+        stroke-miterlimit: 10;
+        stroke-width: 8.36px;
+      }
+    </style>
+  </defs>
+  <g id="elipse">
+    <circle class="cls-3" cx="158.51" cy="158.51" r="154.33"/>
+  </g>
+  <g id="Layer_2_copy" data-name="Layer 2 copy">
+    <g>
+      <path class="cls-1" d="m73.07,63.07h170.16c5.92,0,10.72,4.8,10.72,10.72v169.44c0,5.92-4.8,10.72-10.72,10.72H73.79c-5.92,0-10.72-4.8-10.72-10.72V73.07c0-5.52,4.48-10,10-10Z"/>
+      <path class="cls-2" d="m63.07,158.51v-85.44c0-5.52,4.48-10,10-10h170.16c5.92,0,10.72,4.8,10.72,10.72v84.72s-28.84-8.09-89.59-8.09c-65.76,0-101.29,11.17-101.29,8.09Z"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,216 @@
+/* 
+    CSS Guide 
+
+    1.  General Styles (Normalize)
+
+ */
+
+
+ /* 1. ---General Styles--- */
+
+body {
+    background-image: url("..//img/jpg/background-2.jpg");
+    background-size:100%;
+    background-repeat: no-repeat;
+    background-color: #000;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: #000;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+img, embed, object, video, picture {
+    max-width: 100%;
+}
+
+p, h1, h2, h3, h4, h5 {
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+    transition: all .5s ease-in-out;
+}
+
+input, textarea {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+}
+
+section h2, section h3, section p {
+    padding-left: 15px;
+}
+
+.spacer {
+    margin-top: 60px;
+}
+
+.txt-spacer {
+    margin-top: 30px;
+}
+
+    /* ---End of General Styles--- */
+
+    .background-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.logo {
+    position: absolute;
+    top: 22%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10%;
+    z-index: 1;
+    height: auto;
+    object-fit: contain;
+}
+
+.disc {
+    position: absolute;
+    width: 50%;
+    right: 20%;
+    left: 25%;
+    top: 14%;
+    height: auto;
+    object-fit: contain;
+}
+
+.table-mixer {
+    position: absolute;
+    width: 60%;
+    top: 9%;
+    left: 20%;
+    height: auto;
+    object-fit: contain;
+    z-index: 0;
+}
+
+   /* icon */
+ 
+ .icon {
+    width: 100px; /* Adjust the width of the icons */
+    height: auto; /* This maintains the aspect ratio of the icons */
+ }
+
+ .icon-left1 {
+    float: left;
+    width: 50px;
+    height: auto;
+ }
+ 
+ .icon-left2 {
+    float: left;
+    width: 50px ;
+    height: auto;
+    display: block;
+ }
+
+ .icon-right1 {
+    float: right;
+    width: 50px ;
+    height: auto;
+
+ }
+ .icon-right2 {
+    float: right;
+    width: 50px ;
+    height: auto;
+    
+ }
+
+.button {
+    position: absolute;
+    bottom: 420px; /* Adjust the vertical position as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    z-index: 2;
+  }
+  
+  .btn {
+    width: 40px; /* Adjust the width of the buttons */
+    height: 40px; /* Adjust the height of the buttons */
+    border-radius: 30px;
+    border: #fff solid 2px;
+    transition: 0.3s all ease-in-out;
+    background: #b2b8da;
+    text-shadow: 0px 0px 50px #0072ff;
+  }
+
+#Play_button, #Pause-button, #fast-forward{
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    border: #fff solid 2px;
+    transition: 0.3s all ease-in-out;
+    background: #b2b8da;
+
+}
+#Play_button, #Pause-button, #fast-forward{
+    border: #3281a0 solid 2px;
+    box-shadow: 1px 1px 1px rgb(82, 64, 64),
+                10px 10px 12px rgb(45, 40, 40),
+                inset 2px 2px 10px black,
+                inset 2px 2px 10px black,
+                inset 2px 2px 10px black,
+                inset 2px 2px 10px black;
+    text-shadow: 0px 0px 50px #0072ff;     
+    animation: animate 3s linear infinite;                    
+}
+
+#Pause-button{
+    animation-delay: 0.3s;
+}
+
+#fast-forward{
+    animation-delay: 0.7s;
+}
+
+
+/* Styles for the drop zones */
+.drop-box {
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+    margin: 100px auto;
+    max-width: 450px;
+    z-index: 1;
+}
+
+.drop-zone {
+    min-height: 70px;
+    min-width: 70px;
+    border: 2px dashed #aaa;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+}
+
+/* Styles for the draggable icons */
+.icon-container {
+    margin-top: 400px;
+    width: 70%;
+    cursor: grab;
+
+}
+
+.icon-container img {
+    width: 50%;
+    cursor: grab;
+}
+
+/* Styles for the active drag state of the icons */
+.icon-container img:active {
+    cursor: grabbing;
+}
